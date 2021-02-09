@@ -1,0 +1,127 @@
+
+  
+  .reg-form {
+    width: 50%;
+    //   background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: $box-shadow;
+    margin: 5% auto;
+  
+    .tab {
+      display: none;
+      width: 80%;
+      margin: 0 auto 30px;
+      // border: 1px solid red;
+  
+      i {
+        position: relative;
+        left: 0;
+      }
+  
+      h2 {
+        color: #4b4b4b;
+        margin: 20px 0 0;
+      }
+      p{
+          opacity: .6;
+      }
+  
+      .input-box {
+        position: relative;
+        margin: 40px 0 0;
+  
+        input {
+          width: 100%;
+          margin: 0 auto;
+          height: 30px;
+          background: none;
+          border: none;
+          border-bottom: 2px solid #aaaaaa;
+          padding: 0 0 0 0;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        label {
+          position: absolute;
+          color: #aaaaaa;
+          left: 0;
+          z-index: -1;
+        }
+        input:focus {
+          transition: all 600ms ease-out;
+          border-bottom: 2px solid $primary-color;
+        }
+  
+        input:focus ~ label,
+        input:valid ~ label {
+          transform: translateY(-20px);
+          transition: all 400ms ease-out;
+          font-size: 14px;
+        }
+  
+        input:not(:focus) ~ label {
+          transition: all 400ms ease-out;
+        }
+      }
+    }
+    .active {
+      display: block;
+    }
+  
+    .finish {
+      background-color: $primary-color !important;
+    }
+  
+    //  NEXT & PREVIOUS BUTTON
+    .btn-main {
+      width: 80%;
+      margin: 0 auto 40px;
+  
+      button {
+        padding: 10px 25px;
+        outline: none;
+        border: none;
+        background-color: $primary-color;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 600;
+
+        i{
+            color: #fff;
+            padding: 0 0 0 5px;
+        }
+      }
+    }
+  
+    .stepper {
+      width: 80%;
+      margin: 20px auto;
+  
+      .step {
+        width: 70px;
+        height: 4px;
+        border-radius: 4px;
+        background-color: #c5c5c5;
+        display: inline-block;
+      }
+    }
+  }
+
+  @media screen and (max-width:992px){
+    .reg-form{
+      width: 95%;
+      box-shadow: none;
+
+      .tab{
+        width: 100%;
+      }
+
+      .btn-main{
+        width: 100%;
+      }
+      .stepper{
+        width: 100%;
+      }
+    }
+  }

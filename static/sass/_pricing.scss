@@ -1,0 +1,129 @@
+
+
+.pricing {
+  width: 100%;
+  margin: 5% auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &-table {
+    width: 30%;
+    border: 1px solid #eaeaea;
+    position: relative;
+    text-align: center;
+
+    &:hover{
+        box-shadow: 0 10px 21px 0 rgba(0, 0, 0, 0.21);
+        transition: all 0.5s ease 0s;
+    }
+    .pricing-header {
+      padding: 15px 0px 100px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      position: relative;
+      .header-text {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: #424242;
+        text-align: center;
+      }
+    }
+
+    .pricing-value {
+      width: 120px;
+      height: 120px;
+      border-radius: 40px;
+      position: absolute;
+      top: 100px;
+      left: 150px;
+      right: 0;
+      background-color: lighten($color: $primary-color, $amount: 10);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotate(-42deg);
+
+      .value {
+        text-align: center;
+        transform: rotate(42deg);
+        color: white;
+        line-height: 0.9;
+
+        h2 {
+          font-size: 35px;
+          font-weight: 400;
+          text-align: center;
+          line-height: .9;
+        }
+        p {
+          text-align: center;
+        }
+      }
+      .content {
+        position: relative;
+      }
+    }
+
+    .content {
+      margin: 100px 0 0;
+      list-style: none;
+      text-align: center;
+
+      li {
+        // padding: 0px 0 15px;
+        font-size: 20px;
+        line-height: 40px;
+        font-weight: 300;
+
+        i {
+          color: lighten($color: $primary-color, $amount: 10);
+          padding: 0 5px;
+        }
+      }
+    }
+    a {
+        position: relative;
+      display: inline-block;
+      background-color: $primary-color;
+      margin: 20px auto;
+      letter-spacing: 2px;
+      background: #ffffff;
+      font-size: 18px;
+      padding: 10px 20px;
+      color: #3a3a3a;
+      box-shadow: 0 7px 10px #e6e6e6;
+      text-transform: uppercase;
+      transition: all 0.5s ease 0s;
+
+      &:hover{
+        background-color: $primary-color;
+        transition: all 500ms ease-in;
+        color: #fff;
+      }
+      i{
+          padding: 0 5px;
+      }
+    }
+  }
+}
+
+
+// FOR MOBILE SCREENS
+@media screen and (max-width: 992px){
+  .pricing{
+    width: 100%;
+    display:block;
+
+    &-table{
+      width: 90%;
+      margin: 20px auto 15px;
+
+      .pricing-value{
+        position: absolute;
+        left: 0;
+        margin: 0 auto;
+      }
+    }
+  }
+}
